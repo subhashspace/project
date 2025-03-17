@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import openai
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route("/process_audio", methods=["POST"])
 def process_audio():
