@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
 import openai
+import os
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 @app.route("/process_audio", methods=["POST"])
 def process_audio():
